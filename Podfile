@@ -8,10 +8,15 @@ target 'WorkPlayground-Swift4' do
   # Pods for WorkPlayground-Swift4
   pod 'SnapKit', '~> 4.0.0'
   pod 'IGListKit', '~> 3.0'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
+  pod 'Texture'
 
   target 'WorkPlayground-Swift4Tests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest',     '~> 4.0'
   end
 
   target 'WorkPlayground-Swift4UITests' do
