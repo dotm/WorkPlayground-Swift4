@@ -1,0 +1,6 @@
+framework module Pods_WorkPlayground_Swift4UITests {
+  umbrella header "Pods-WorkPlayground-Swift4UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
