@@ -60,7 +60,9 @@ class NavigationWidgetNode: ASDisplayNode {
     
     override init() {
         super.init()
-        automaticallyManagesSubnodes = true
+        //automaticallyManagesSubnodes = true
+        addSubnode(headerNode)
+        addSubnode(bodyNode)
         enableSubtreeRasterization()
     }
     
@@ -73,9 +75,25 @@ class NavigationWidgetNode: ASDisplayNode {
             children: [headerNode, bodyNode]
         )
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("whole node touched")
+
+        //possible work around (?)
+//        guard let subnodes = subnodes else {return}
+//        for node in subnodes {
+//            guard let touchLocation = touches.first?.location(in: self.view) else {continue}
+//            let touched = node.frame.contains(touchLocation)
+//            guard touched else {continue}
+//            node.touchesBegan(touches, with: event)
+//        }
+    }
 }
 
 class NavigationWidgetHeader: ASDisplayNode {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("header node touched")
+    }
     private let titleNode = ASTextNode()
     private let seeAllButtonNode = ASButtonNode()
     
@@ -94,7 +112,11 @@ class NavigationWidgetHeader: ASDisplayNode {
             .font: UIFont.systemFont(ofSize: 24)
             ]
         )
+        seeAllButtonNode.addTarget(self, action: #selector(handleTap), forControlEvents: .touchUpInside)
         seeAllButtonNode.setAttributedTitle(buttonAttr, for: .normal)
+    }
+    @objc func handleTap(){
+        print("tapped")
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -109,6 +131,9 @@ class NavigationWidgetHeader: ASDisplayNode {
 }
 
 class NavigationWidgetBody: ASDisplayNode {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("body node touched")
+    }
     private var items: [NavigationWidgetItem] = []
     
     override init() {
@@ -130,6 +155,9 @@ class NavigationWidgetBody: ASDisplayNode {
 }
 
 class NavigationWidgetItem: ASDisplayNode {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("item node touched")
+    }
     private let imageNode = ASImageNode()
     private let titleNode = ASTextNode()
     private let subtitleNode = ASTextNode()
