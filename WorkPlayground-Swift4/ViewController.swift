@@ -61,7 +61,7 @@ class NavigationWidgetNode: ASDisplayNode {
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        enableSubtreeRasterization()
+        //enableSubtreeRasterization()
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
