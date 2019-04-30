@@ -90,12 +90,28 @@ class NavigationWidgetNode: ASDisplayNode {
     }
 }
 
+class NavigationWidgetSeeAllNode: ASButtonNode {
+    override init() {
+        super.init()
+        let buttonAttr = NSAttributedString(string: "Lihat Semua", attributes: [
+            .foregroundColor: UIColor.green,
+            .font: UIFont.systemFont(ofSize: 24)
+            ]
+        )
+        addTarget(self, action: #selector(handleTap), forControlEvents: .touchUpInside)
+        setAttributedTitle(buttonAttr, for: .normal)
+    }
+    @objc func handleTap(){
+        print("tapped")
+    }
+}
+
 class NavigationWidgetHeader: ASDisplayNode {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("header node touched")
     }
     private let titleNode = ASTextNode()
-    private let seeAllButtonNode = ASButtonNode()
+    private let seeAllButtonNode = NavigationWidgetSeeAllNode()
     
     override init() {
         super.init()
@@ -106,17 +122,6 @@ class NavigationWidgetHeader: ASDisplayNode {
             .font: UIFont.systemFont(ofSize: 24)
             ]
         )
-        
-        let buttonAttr = NSAttributedString(string: "Lihat Semua", attributes: [
-            .foregroundColor: UIColor.green,
-            .font: UIFont.systemFont(ofSize: 24)
-            ]
-        )
-        seeAllButtonNode.addTarget(self, action: #selector(handleTap), forControlEvents: .touchUpInside)
-        seeAllButtonNode.setAttributedTitle(buttonAttr, for: .normal)
-    }
-    @objc func handleTap(){
-        print("tapped")
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
