@@ -23,6 +23,10 @@ PODS:
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxCocoa-Texture (2.3.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+    - Texture (= 2.8)
   - RxSwift (4.5.0)
   - RxTest (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
@@ -52,6 +56,7 @@ DEPENDENCIES:
   - IGListKit (~> 3.0)
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
+  - RxCocoa-Texture
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
   - SnapKit (~> 4.0.0)
@@ -65,6 +70,7 @@ SPEC REPOS:
     - PINRemoteImage
     - RxBlocking
     - RxCocoa
+    - RxCocoa-Texture
     - RxSwift
     - RxTest
     - SnapKit
@@ -77,11 +83,12 @@ SPEC CHECKSUMS:
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxCocoa-Texture: e93fe1e32772d3f744069aeea16abe38f94ec8b2
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   RxTest: 3ccb66bfbace0bf7df1c43a7c75d046f8ce60372
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Texture: fc6e0157201f3a6e503d364c147b1872e365cef4
 
-PODFILE CHECKSUM: d5b36a578fc21a331d393bfeae5ab65f595a3f40
+PODFILE CHECKSUM: 7e802b53409122f030c8e9a015e7676353151ba1
 
 COCOAPODS: 1.6.1
