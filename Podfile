@@ -12,6 +12,7 @@ target 'WorkPlayground-Swift4' do
   pod 'RxCocoa', '~> 4.0'
   pod 'Texture'
   pod 'RxCocoa-Texture'
+  pod 'NSObject+Rx'
 
   target 'WorkPlayground-Swift4Tests' do
     inherit! :search_paths
