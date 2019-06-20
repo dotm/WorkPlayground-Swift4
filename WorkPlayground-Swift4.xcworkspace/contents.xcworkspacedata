@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/nakama/Desktop/WorkPlayground-Swift4/WorkPlayground-Swift4/ProductResultGridHeader.swift">
+   </FileRef>
+   <FileRef
       location = "group:WorkPlayground-Swift4.xcodeproj">
    </FileRef>
    <FileRef

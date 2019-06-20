@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		3CCD2C1F22718F9A009A2B9E /* WorkPlayground_Swift4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCD2C1E22718F9A009A2B9E /* WorkPlayground_Swift4UITests.swift */; };
 		5DA7276256BADA439B29F479 /* Pods_WorkPlayground_Swift4Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB4E2FE9E0619B0F1568E8B /* Pods_WorkPlayground_Swift4Tests.framework */; };
 		D75E4791AF749B420AD19237 /* Pods_WorkPlayground_Swift4UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6725BCAFADD5FE5ED859CD7D /* Pods_WorkPlayground_Swift4UITests.framework */; };
+		E5CB5BD022BB708500739952 /* ProductResultGridHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB5BCF22BB708500739952 /* ProductResultGridHeader.swift */; };
+		E5CB5BD222BB70BA00739952 /* ProductResultGridBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB5BD122BB70BA00739952 /* ProductResultGridBody.swift */; };
 		FB45B4D8787CCE82B9FFD5C6 /* Pods_WorkPlayground_Swift4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650EBFC6E0C9A92C9DD86C13 /* Pods_WorkPlayground_Swift4.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		6725BCAFADD5FE5ED859CD7D /* Pods_WorkPlayground_Swift4UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkPlayground_Swift4UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AD59D5AFB0E3AC05ECD5AC /* Pods-WorkPlayground-Swift4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkPlayground-Swift4.debug.xcconfig"; path = "Target Support Files/Pods-WorkPlayground-Swift4/Pods-WorkPlayground-Swift4.debug.xcconfig"; sourceTree = "<group>"; };
 		7BB4E2FE9E0619B0F1568E8B /* Pods_WorkPlayground_Swift4Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkPlayground_Swift4Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5CB5BCF22BB708500739952 /* ProductResultGridHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductResultGridHeader.swift; path = "/Users/nakama/Desktop/WorkPlayground-Swift4/WorkPlayground-Swift4/ProductResultGridHeader.swift"; sourceTree = "<absolute>"; };
+		E5CB5BD122BB70BA00739952 /* ProductResultGridBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResultGridBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 			children = (
 				3CCD2BFE22718F98009A2B9E /* AppDelegate.swift */,
 				3CCD2C0022718F98009A2B9E /* ViewController.swift */,
+				E5CB5BD122BB70BA00739952 /* ProductResultGridBody.swift */,
+				E5CB5BCF22BB708500739952 /* ProductResultGridHeader.swift */,
 				3CCD2C0222718F98009A2B9E /* Main.storyboard */,
 				3CCD2C0522718F9A009A2B9E /* Assets.xcassets */,
 				3CCD2C0722718F9A009A2B9E /* LaunchScreen.storyboard */,
@@ -162,7 +168,6 @@
 				3C037395C3D49F94F944C407 /* Pods-WorkPlayground-Swift4UITests.debug.xcconfig */,
 				657AB0A39D0EFB7963B41620 /* Pods-WorkPlayground-Swift4UITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -406,6 +411,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CCD2C0122718F98009A2B9E /* ViewController.swift in Sources */,
+				E5CB5BD022BB708500739952 /* ProductResultGridHeader.swift in Sources */,
+				E5CB5BD222BB70BA00739952 /* ProductResultGridBody.swift in Sources */,
 				3CCD2BFF22718F98009A2B9E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
