@@ -56,9 +56,17 @@ fileprivate class PromoLabelsNode: ASDisplayNode {
         }
     }
     
-    override func didLoad() {
-        layer.cornerRadius = CGFloat(5)
-        layer.maskedCorners = [.layerMaxXMinYCorner]
+    override func layoutDidFinish() {
+        super.layoutDidFinish()
+        roundCorners(cornerRadius: 5)
+    }
+    
+    private func roundCorners(cornerRadius: Double) {
+        let path = UIBezierPath(roundedRect: self.view.bounds, byRoundingCorners: [.topRight], cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.view.bounds
+        maskLayer.path = path.cgPath
+        self.view.layer.mask = maskLayer
     }
     
     internal override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
